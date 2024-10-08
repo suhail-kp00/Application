@@ -10,7 +10,7 @@ def index():
         name = request.form['name']
         email = request.form['email']
         collection.insert_one({'name': name, 'email': email})
-        submissions=list(collection.find({},{'_id':0,'name':1,'email':1}))
+    submissions=list(collection.find({},{'_id':0,'name':1,'email':1}))
     return render_template('index.html', submissions=submissions)
 if __name__ == '__main__':
     app.run(debug=True)
