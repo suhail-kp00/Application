@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 from pymongo import MongoClient
 app = Flask(__name__)
-client=MongoClient('mongodb://localhost:27017/')
-db=client['flask_db']
+client=MongoClient('mongodb+srv://Suhail-kp00:<Suhail@123>@cluster0.tuhmo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+db=client['Cluster0']
 collection=db['submissions']
 @app.route('/', methods=['GET', 'POST'])
 def index():
